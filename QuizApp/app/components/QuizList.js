@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Button,
   Modal,
-  TouchableOpacity,
+  TouchableNativeFeedback,
   Image,
 } from 'react-native';
 
@@ -20,6 +20,12 @@ export default class QuizList extends Component{
     this.state = {
       modalVisible: false,
     }
+
+  }
+
+  _onPress = () => {
+    this.toggleModal();
+    this.props.onPressItem(this.props.quiz);
   }
 
   toggleModal = () =>{
@@ -36,10 +42,12 @@ export default class QuizList extends Component{
               <Text style={styles.quizName}>{quiz.name}</Text>
               <Text style={styles.quizDescription}>{quiz.description}</Text>
             </View>
-            <TouchableOpacity style={styles.startQuiz} onPress={this.toggleModal}>
+            <TouchableNativeFeedback style={styles.startQuiz} onPress={this.toggleModal}>
+              <View>
               <Image style={{ tintColor: quiz.color }} source={require('../../assets/images/playButton.png')} />
               <Text style={[{color: quiz.color}, styles.startText]}>Start Quiz</Text>
-            </TouchableOpacity>
+              </View>
+            </TouchableNativeFeedback>
           </View>
         
           <Modal
@@ -60,9 +68,9 @@ export default class QuizList extends Component{
                 <Text style={styles.introContent}>{quiz.numQuestions} Multiple Choice Questions</Text>
               </View>
 
-              <TouchableOpacity style={styles.takeQuiz} onPress={onPressItem}>
+              <TouchableNativeFeedback style={styles.takeQuiz} onPress={this._onPress}>
                 <Text style={styles.buttonText}>Take Quiz</Text>
-              </TouchableOpacity>
+              </TouchableNativeFeedback>
             </View>
 
 

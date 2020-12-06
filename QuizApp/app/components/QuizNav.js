@@ -31,14 +31,13 @@ export default class QuizNav extends Component<Props> {
 
     
     componentDidMount() {
-        this._makeLocalRequestForGameList();
+      this._makeLocalRequestForGameList();
     }
   
     _makeLocalRequestForGameList = () => {
 
-        this.setState({ error: null });
-        this.setState({ quizList: localGameList.quizzes });
-
+      this.setState({ error: null });
+      this.setState({ quizList: localGameList.quizzes });
 
     };
 
@@ -55,13 +54,13 @@ export default class QuizNav extends Component<Props> {
     );
 
 
-    _onPressItem = (quiz: Object) => {
+    _onPressItem = (quiz) => {
 
-        //  Store the selected game
         GameHelper.setActualQuiz(quiz);
+        GameHelper.generateQuiz();
         this.setState({ introModalVisible: false });
 
-        this.props.navigation.navigate ('Quiz');
+        this.props.navigation.navigate("Quiz");
     };
 
     

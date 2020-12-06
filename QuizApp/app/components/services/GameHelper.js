@@ -11,7 +11,8 @@ class GameHelper {
     static userAnswers = [];
   
     static setActualQuiz(quiz) {
-      return this.actualQuiz  = quiz;
+      this.actualQuiz = quiz;
+      return;
     }
   
     static getActualQuiz() {
@@ -19,7 +20,9 @@ class GameHelper {
     }
   
     static setQuestions(questions) {
-      return this.questions = questions;
+      this.questions = questions;
+
+      return;
     }
   
     static getQuestions() {
@@ -31,7 +34,9 @@ class GameHelper {
     }
     
     static setAnswers(answers){
-      return this.answers = answers;
+      this.answers = answers;
+
+      return;
     }
     
     static getAnswers(){
@@ -42,33 +47,31 @@ class GameHelper {
       return this.answers[question_id];
     }
 
-    static setActualQuestionId (actualQuestionId) {
-      this.actualQuestionId  = actualQuestionId;
+    static setActualQuestionId(actualQuestionId) {
+      this.actualQuestionId = actualQuestionId;
+
+      return;
     }
   
-    static getActualQuestionId () {
+    static getActualQuestionId() {
       return this.actualQuestionId;
     }
     
+    static getCurrentQuestionImagePath() {
+      const currentQuestion = this.questions[this.actualQuestionId];
 
-    //have actual quiz by now (called in Quiz.js)
-    static generateQuiz () {
-  
-      GameHelper.setQuestions(GameHelper.getActualQuiz().questions);
-      GameHelper.setActualQuestionId(0);
-      
-      var answers = [];
-      var questions = GameHelper.getQuestions();
-      console.log(questions);
-      questions.forEach(item => {
-        answers.push(item.quiz_answer);
-      });
-
-      GameHelper.setAnswers(answers);
-  
+      return currentQuestion.image;
     }
 
-    static checkValidAnswer (question, quizOption) {
+    //have actual quiz by now
+    static generateQuiz() {
+      GameHelper.setQuestions(GameHelper.getActualQuiz().questions);
+      GameHelper.setActualQuestionId(0);  
+    
+      return;
+    }
+
+    static checkValidAnswer(question, quizOption) {
       if (question.quiz_option_code == quizOption.code) {
         return true;
       } else {
@@ -76,10 +79,10 @@ class GameHelper {
       }
     }
   
-    // static updateQuizStatus (quizOption) {
-    //   var quiz = GameHelper.ge();
-    //   this.answers[GameHelper.getActualQuizIdx()]  = GameHelper.checkValidAnswer(quiz, quizOption);
-    // }
+    static updateQuizStatus(answerCorrect) {
+      var quiz = GameHelper.getActualQuiz();
+      this.answers[GameHelper.getActualQuestionId()]  = answerCorrect;
+    }
   
     static moveNextQuestion () {
       GameHelper.setActualQuestionId (GameHelper.getActualQuestionId() + 1);

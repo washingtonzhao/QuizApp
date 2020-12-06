@@ -42,6 +42,7 @@ function App(){
             component={Quiz}
             options={{ headerShown: false }}
         /> 
+
         </Stack.Navigator>
         </NavigationContainer>
 
@@ -50,19 +51,3 @@ function App(){
 
 export default App;
 
-  
-
-// const Stack = createStackNavigator();
-
-// function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen name="Home" component={HomeScreen} />
-//         <Stack.Screen name="Test" component={TestScreen} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-
-// export default App;

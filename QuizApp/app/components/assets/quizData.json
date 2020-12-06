@@ -10,7 +10,8 @@
 			"questions":[
 				{
 					"code":"1",
-					"description":"World War I began in which year?",
+					"question":"World War I began in which year?",
+					"image": "C:\\Users\\washi\\Documents\\QuizApp\\QuizApp\\assets\\images\\languages\\Arabic.png",
 					"options":[
 						{
 							"code":"1",
@@ -34,7 +35,7 @@
 				},
 				{
 					"code":"2",
-					"description":"The Magna Carta was published by the King of which country?",
+					"question":"The Magna Carta was published by the King of which country?",
 					"options":[
 						{
 							"code":"1",
@@ -58,7 +59,7 @@
 				},
 				{
 					"code":"3",
-					"description":"The first successful printing press was developed by ...",
+					"question":"The first successful printing press was developed by ...",
 					"options":[
 						{
 							"code":"1",
@@ -82,7 +83,7 @@
 				},
 				{
 					"code":"4",
-					"description":"Which Roman Emperor built a massive wall across Northern Britain in 122 A.D.?",
+					"question":"Which Roman Emperor built a massive wall across Northern Britain in 122 A.D.?",
 					"options":[
 						{
 							"code":"1",
@@ -106,7 +107,7 @@
 				},
 				{
 					"code":"5",
-					"description":"Who was the first Western explorer to reach China?",
+					"question":"Who was the first Western explorer to reach China?",
 					"options":[
 						{
 							"code":"1",
@@ -140,7 +141,7 @@
 			"questions":[
 				{
 					"code":"1",
-					"description":"Which of these countries covers the smallest total area?",
+					"question":"Which of these countries covers the smallest total area?",
 					"options":[
 						{
 							"code":"1",
@@ -164,7 +165,7 @@
 				},
 				{
 					"code":"2",
-					"description":"Where in Chile is the Atacama Desert situated?",
+					"question":"Where in Chile is the Atacama Desert situated?",
 					"options":[
 						{
 							"code":"1",
@@ -188,7 +189,7 @@
 				},
 				{
 					"code":"2",
-					"description":"Which island in the Atlantic has one of the world's highest volcanic mountains?",
+					"question":"Which island in the Atlantic has one of the world's highest volcanic mountains?",
 					"options":[
 						{
 							"code":"1",
@@ -222,7 +223,7 @@
 			"questions":[
 				{
 					"code":"1",
-					"description":"What did Yoda mean in saying \"There is another\"?",
+					"question":"What did Yoda mean in saying \"There is another\"?",
 					"options":[
 						{
 							"code":"1",
@@ -246,7 +247,7 @@
 				},
 				{
 					"code":"2",
-					"description":"What city is attacked in the 2008 film \"Cloverfield\"?",
+					"question":"What city is attacked in the 2008 film \"Cloverfield\"?",
 					"options":[
 						{
 							"code":"1",
@@ -270,7 +271,7 @@
 				},
 				{
 					"code":"3",
-					"description":"On the set of \"Jaws\", which character was nicknamed \"Bruce\"?",
+					"question":"On the set of \"Jaws\", which character was nicknamed \"Bruce\"?",
 					"options":[
 						{
 							"code":"1",

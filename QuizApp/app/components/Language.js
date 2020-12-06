@@ -11,11 +11,10 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const Language = ({ type, imageSource }) => {
+const Language = ({ type, imageSource, _onPress }) => {
     const nav = useNavigation();
-
     return (
-        <TouchableOpacity style={styles.language} onPress= {() => nav.navigate("QuizNav")}> 
+        <TouchableOpacity style={styles.language} onPress= {_onPress}> 
             <View style={styles.item}>
                 <Image source={imageSource} />
                 <Text style={styles.languageText}>{type}</Text>
