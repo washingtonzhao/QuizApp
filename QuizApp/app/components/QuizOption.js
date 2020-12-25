@@ -3,10 +3,11 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
+  View
 } from 'react-native';
 
 
-export default class QuizOption extends Component<{}> {
+export default class QuizOption extends Component{
   constructor(props){
     super(props);
   }
@@ -22,10 +23,13 @@ export default class QuizOption extends Component<{}> {
 
     return (
       <TouchableOpacity
-        onPress={this._onPress} style={styles.quizOptions}
+        onPress={this._onPress}
       >
+        <View style={styles.quizOptions}>
           <Text style={styles.optionText}>{quizOption.description}</Text>
+        </View>
       </TouchableOpacity>
+
     );
   }
 }
@@ -39,10 +43,10 @@ const styles = StyleSheet.create({
     borderRadius: 11,
     height: 63,
     width: 150,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flex: 1,
     justifyContent: 'center',
-    marginHorizontal: 10,
+    alignItems: 'center',
+    marginHorizontal: 15,
     marginVertical: 10,
   },
 
@@ -51,6 +55,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: '500',
     color: '#313131',
+
   },
 
 });

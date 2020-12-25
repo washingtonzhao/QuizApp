@@ -54,13 +54,10 @@ export default class QuizNav extends Component<Props> {
     );
 
 
-    _onPressItem = (quiz) => {
-
-        GameHelper.setActualQuiz(quiz);
-        GameHelper.generateQuiz();
+    _onPressItem = (item) => {
         this.setState({ introModalVisible: false });
 
-        this.props.navigation.navigate("Quiz");
+        this.props.navigation.navigate("Quiz", { quiz: item });
     };
 
     

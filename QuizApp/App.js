@@ -12,6 +12,7 @@ import LandingScreen from './app/components/LandingScreen';
 import LanguageScreen from './app/components/LanguageScreen';
 import QuizNav from './app/components/QuizNav';
 import Quiz from './app/components/Quiz';
+import Results from './app/components/Results';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,11 @@ function App(){
             options={{ headerShown: false }}
         /> 
 
+        <Stack.Screen
+            name="Results"
+            component={Results}
+            options={{ headerShown: false }}
+        />      
         </Stack.Navigator>
         </NavigationContainer>
 

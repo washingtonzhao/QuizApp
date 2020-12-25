@@ -42,10 +42,10 @@ export default class QuizList extends Component{
               <Text style={styles.quizName}>{quiz.name}</Text>
               <Text style={styles.quizDescription}>{quiz.description}</Text>
             </View>
-            <TouchableNativeFeedback style={styles.startQuiz} onPress={this.toggleModal}>
-              <View>
-              <Image style={{ tintColor: quiz.color }} source={require('../../assets/images/playButton.png')} />
-              <Text style={[{color: quiz.color}, styles.startText]}>Start Quiz</Text>
+            <TouchableNativeFeedback onPress={this.toggleModal}>
+              <View style={styles.startQuiz}>
+                <Image style={{ tintColor: quiz.color }} source={require('../../assets/images/playButton.png')} />
+                <Text style={[{color: quiz.color}, styles.startText]}>Start Quiz</Text>
               </View>
             </TouchableNativeFeedback>
           </View>
@@ -68,8 +68,10 @@ export default class QuizList extends Component{
                 <Text style={styles.introContent}>{quiz.numQuestions} Multiple Choice Questions</Text>
               </View>
 
-              <TouchableNativeFeedback style={styles.takeQuiz} onPress={this._onPress}>
-                <Text style={styles.buttonText}>Take Quiz</Text>
+              <TouchableNativeFeedback onPress={this._onPress}>
+                <View style={styles.takeQuiz}>
+                  <Text style={styles.takeText}>Take Quiz</Text>
+                </View>
               </TouchableNativeFeedback>
             </View>
 
@@ -179,10 +181,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  buttonText: {
+  takeText:{
     color: '#FFFFFF',
     fontSize: 24,
-    lineHeight: 28,
     fontWeight: 'bold',
-  },
+  }
 });
