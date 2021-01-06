@@ -104,7 +104,14 @@ export default function Quiz({ route, navigation }){
                           setCurrentQuestion(currentQuestion+1);
                         }
                         else{
-                          navigation.navigate("Results",score);
+                          const quizScore = score;
+                          setCurrentQuestion(0);
+                          setScore(0);
+                          addTry(0);
+                          setAnswer(false);
+                          showModal(false);
+                          setText(null);
+                          navigation.navigate("Results",{ score: quizScore, quiz:quiz});
                         }
                       }
 

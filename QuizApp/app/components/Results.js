@@ -9,15 +9,14 @@ import {
 import * as Progress from 'react-native-progress';
 
 export default function Results({ route, navigation }){
-    const score = route.params;
-
+    const {score, quiz} = route.params;
 
     return(
         <View style={styles.screen}>
           <View style={styles.resultContainer}>
             <Image source={require('../../assets/images/trophy.png')} />
             <Text style={styles.congratulation}>Congratulations!</Text>
-            <Text style={styles.normalText}>You finished the quiz on Budgeting Basics! Well done!</Text>
+            <Text style={styles.normalText}>You finished the quiz on {quiz.name}.Well done!</Text>
             <View style={styles.progress}>
               <View style={styles.bar}>
                 <Text style={styles.normalText}>Beginner</Text>
@@ -28,7 +27,9 @@ export default function Results({ route, navigation }){
           </View>
 
           <View style={styles.buttons}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{
+              navigation.navigate("Quiz",{quiz: quiz});
+            }}>
             <View style={styles.button}>
               <Text style={styles.retakeQuiz}>Retake Quiz</Text>
             </View>
