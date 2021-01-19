@@ -5,6 +5,7 @@ import {
     Text,
     View,
     FlatList,
+    Button,
 } from 'react-native';
 
 import Header from './Header';
@@ -12,7 +13,22 @@ import GameHelper from './services/GameHelper';
 import localGameList from './assets/quizData.json';
 import QuizList from './QuizList';
 
+import { useNavigation, NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 type Props = {};
+
+function GoToButton({ screenName }) {
+  const navigation = useNavigation();
+
+  return (
+    <Button
+      title={`Go to Profile`}
+      onPress={() => navigation.navigate(screenName)}
+    />
+  );
+}
+
 
 export default class QuizNav extends Component<Props> {
 
@@ -66,7 +82,10 @@ export default class QuizNav extends Component<Props> {
           <View style={styles.container}>
             <Header header="Key Learning" />
             <View style={styles.listContainer}>
-              <Text style={styles.quizText}>Quizzes</Text>
+              <View >
+                <GoToButton screenName="ProfileScreen" />
+                <Text style={styles.quizText}>Quizzes</Text>
+              </View>
               <FlatList
                 data={this.state.quizList}
                 renderItem={this._renderItem}
@@ -100,6 +119,7 @@ const styles = StyleSheet.create({
       color: '#313131',
       fontWeight: 'bold',
       paddingBottom: 10,
+      marginTop:10,
     },
     
     imageBackground : {
@@ -116,5 +136,6 @@ const styles = StyleSheet.create({
       fontWeight: '900',
 
     },
+
 
   });

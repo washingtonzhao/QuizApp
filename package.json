@@ -1,0 +1,19 @@
+{
+  "name": "quizapp",
+  "version": "1.0.0",
+  "description": "App serving educational content through React Native-- Key Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/washingtonzhao/QuizApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/washingtonzhao/QuizApp/issues"
+  },
+  "homepage": "https://github.com/washingtonzhao/QuizApp#readme"
+}

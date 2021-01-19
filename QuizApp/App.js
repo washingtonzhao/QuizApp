@@ -13,6 +13,10 @@ import LanguageScreen from './app/components/LanguageScreen';
 import QuizNav from './app/components/QuizNav';
 import Quiz from './app/components/Quiz';
 import Results from './app/components/Results';
+import ProfileScreen from './app/components/ProfileScreen';
+import QuizAccessPage from "./app/components/QuizAccessPage";
+import ResumeQuizAccessPage from "./app/components/ResumeQuizAccessPage";
+import HealthQuizAccessPage from "./app/components/HealthQuizAccessPage";
 
 const Stack = createStackNavigator();
 
@@ -48,7 +52,30 @@ function App(){
             name="Results"
             component={Results}
             options={{ headerShown: false }}
-        />      
+        />  
+
+        <Stack.Screen
+            name="ProfileScreen"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+        />  
+
+        <Stack.Screen
+            name="QuizAccessPage"
+            component={QuizAccessPage}
+            options={{ headerShown: false }}
+        /> 
+        <Stack.Screen
+            name="ResumeQuizAccessPage"
+            component={ResumeQuizAccessPage}
+            options={{ headerShown: false }}
+        /> 
+        <Stack.Screen
+            name="HealthQuizAccessPage"
+            component={HealthQuizAccessPage}
+            options={{ headerShown: false }}
+        /> 
+
         </Stack.Navigator>
         </NavigationContainer>
 
